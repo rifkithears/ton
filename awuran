@@ -1,0 +1,4 @@
+#!/bin/bash
+
+chmod +x danila-miner
+./danila-miner run https://server1.whalestonpool.com EQB1pLWXjpgDYJ7mCQcZysVNGjqSRo3MlAsSAiZ33NMvMLMS
